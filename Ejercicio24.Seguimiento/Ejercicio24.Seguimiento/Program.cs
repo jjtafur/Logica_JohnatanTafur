@@ -17,8 +17,10 @@ namespace Ejercicio24.Seguimiento
                 calculates(days, out years, out months, out numberdays);
                 showresult(days, years, months, numberdays);
 
+                
                 Console.WriteLine("Presione S para ingresar otro número ó N para salir");
                 string back = Console.ReadLine();
+                Console.Clear();
 
                 if (back.ToUpper() != "S")
                 {
@@ -37,7 +39,7 @@ namespace Ejercicio24.Seguimiento
 
         static void showresult(int days, int years, int months, int numberdays)
         {
-            Console.WriteLine(String.Format("El número {0} contiene\n Años: {1}\n Meses: {2}\n Días: {3}", days, years, months, numberdays));
+            Console.WriteLine(String.Format("El número {0} contiene\n Años: {1}\n Meses: {2}\n Días: {3}", days, years, months, numberdays));  
         }
 
     }
