@@ -20,8 +20,8 @@ namespace Ejercicio.EmployeePOO
                 "Apellido: {2}\n" +
                 "Fechas de nacimiento: {3}\n" +
                 "Fecha de contratación: {4}\n" +
-                "Esta activo: {5}\n" +
-                "Salario: {6:C}\n", Id, FirstName, LastName, BirthDate, HiringDate, IsActive, Salary));
+                "¿Está activo?: {5}\n" +
+                "Salario: {6:C2}\n", Id, FirstName, LastName, BirthDate, HiringDate, IsActive, Salary));
         }
     }
 }
