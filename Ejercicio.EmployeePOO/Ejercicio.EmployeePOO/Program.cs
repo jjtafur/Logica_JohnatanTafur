@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 
 namespace Ejercicio.EmployeePOO
 {
@@ -12,59 +13,28 @@ namespace Ejercicio.EmployeePOO
             decimal salary, sales, valuehours;
             double comissionpercentage, hours;
 
-            //Instancio las clases
-            SalaryEmployee salaryEmployee = new SalaryEmployee();
-     
-            Console.WriteLine("Ingrese ID:");
-            id = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("Ingrese Nombres:");
-            firstName = Console.ReadLine();
-
-            Console.WriteLine("Ingrese Apellidos:");
-            lastName = Console.ReadLine();
-
-            Console.WriteLine("Ingrese fecha de cumpleaños:");
-            birthDate = Convert.ToDateTime(Console.ReadLine());
-
-            Console.WriteLine("Ingrese fecha de contratación:");
-            hiringDate = Convert.ToDateTime(Console.ReadLine());
-
-            Console.WriteLine("¿El empleado esta activo?:");
-            isActive = Console.ReadLine();
+            AskData(out id, out firstName, out lastName, out birthDate, out hiringDate, out isActive);
 
             Console.WriteLine("Salario del empleado:");
             salary = Convert.ToDecimal(Console.ReadLine());
 
-            salaryEmployee.Id = id;
-            salaryEmployee.FirstName = firstName;
-            salaryEmployee.LastName = lastName;
-            salaryEmployee.BirthDate = birthDate;
-            salaryEmployee.HiringDate = hiringDate;
-            salaryEmployee.IsActive = isActive;
-            salaryEmployee.Salary = salary;
+            //Instancio las clases
+            SalaryEmployee salaryEmployee = new SalaryEmployee()
+            {
+                Id = id,
+                FirstName = firstName,
+                LastName = lastName,
+                BirthDate = birthDate,
+                HiringDate = hiringDate,
+                IsActive = isActive,
+                Salary = salary,
+            };
 
             Console.Clear();
             salaryEmployee.ShowEmployeeInformation();
 
-            Console.WriteLine("Ingrese ID:");
-            id = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("Ingrese Nombres:");
-            firstName = Console.ReadLine();
-
-            Console.WriteLine("Ingrese Apellidos:");
-            lastName = Console.ReadLine();
-
-            Console.WriteLine("Ingrese fecha de cumpleaños:");
-            birthDate = Convert.ToDateTime(Console.ReadLine());
-
-            Console.WriteLine("Ingrese fecha de contratación:");
-            hiringDate = Convert.ToDateTime(Console.ReadLine());
-
-            Console.WriteLine("¿El empleado esta activo?:");
-            isActive = Console.ReadLine();
-
+            AskData(out id, out firstName, out lastName, out birthDate, out hiringDate, out isActive);
+      
             Console.WriteLine("Ventas realizadas:");
             sales = Convert.ToDecimal(Console.ReadLine());
 
@@ -87,31 +57,12 @@ namespace Ejercicio.EmployeePOO
             commissionEmplyee.ShowEmployeeInformation();
 
 
-            Console.Clear();
-            salaryEmployee.ShowEmployeeInformation();
+            AskData(out id, out firstName, out lastName, out birthDate, out hiringDate, out isActive);
 
-            Console.WriteLine("Ingrese ID:");
-            id = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("Ingrese Nombres:");
-            firstName = Console.ReadLine();
-
-            Console.WriteLine("Ingrese Apellidos:");
-            lastName = Console.ReadLine();
-
-            Console.WriteLine("Ingrese fecha de cumpleaños:");
-            birthDate = Convert.ToDateTime(Console.ReadLine());
-
-            Console.WriteLine("Ingrese fecha de contratación:");
-            hiringDate = Convert.ToDateTime(Console.ReadLine());
-
-            Console.WriteLine("¿El empleado esta activo?:");
-            isActive = Console.ReadLine();
-
-            Console.WriteLine("Ventas realizadas:");
+            Console.WriteLine("Horas trabajadas:");
             hours = Convert.ToDouble(Console.ReadLine());
 
-            Console.WriteLine("Porcentaje de ventas:");
+            Console.WriteLine("Valor de la hora:");
             valuehours = Convert.ToDecimal(Console.ReadLine());
 
             HourlyEmployee hourlyEmployee = new HourlyEmployee()
@@ -129,6 +80,28 @@ namespace Ejercicio.EmployeePOO
             Console.Clear();
             hourlyEmployee.ShowEmployeeInformation();
 
+        }
+
+        public static void AskData(out int id, out string firstName, out string lastName, out DateTime birthDate, out DateTime hiringDate, out string isActive)
+
+        {
+         Console.WriteLine("Ingrese ID:");
+            id = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Ingrese Nombres:");
+            firstName = Console.ReadLine();
+
+            Console.WriteLine("Ingrese Apellidos:");
+            lastName = Console.ReadLine();
+
+            Console.WriteLine("Ingrese fecha de cumpleaños:");
+            birthDate = Convert.ToDateTime(Console.ReadLine());
+
+            Console.WriteLine("Ingrese fecha de contratación:");
+            hiringDate = Convert.ToDateTime(Console.ReadLine());
+
+            Console.WriteLine("¿El empleado esta activo?:");
+            isActive = Console.ReadLine();
         }
     }
 }

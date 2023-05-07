@@ -16,16 +16,25 @@ namespace Ejercicio.EmployeePOO
 
         public void ShowEmployeeInformation()
         {
-            Console.WriteLine(String.Format("Datos empleado por comisión\n" +
-             "Id: {0}\n" +
-             "Nombre: {1}\n" +
-             "Apellido: {2}\n" +
-             "Fechas de nacimiento: {3}\n" +
-             "Fecha de contratación: {4}\n" +
-             "¿Está activo?: {5}\n" +
-             "Ventas: {6:C2}\n" +
-             "Porcentaje de venta: {7:P2}\n" +
-             "Ingresos: {8:C2}\n" + Id, FirstName, LastName, BirthDate, HiringDate, IsActive, Sales, CommissionPercentage/100, GetValueToPay()));
+            Console.WriteLine(String.Format("Empleado Por Comisión:\n" +
+                "ID: {0}\n" +
+                "Nombres: {1}\n" +
+                "Apellidos: {2}\n" +
+                "Fecha de nacimiento: {3}\n" +
+                "Fecha de contratación: {4}\n" +
+                "¿Está activo? {5}\n" +
+                "Ventas del mes {6:C2}\n" +
+                "Porcentaje de comisión {7:P2}\n" +
+                "Ingresos Comisión: {8:C2}\n",
+                Id,
+                FirstName,
+                LastName,
+                BirthDate,
+                HiringDate,
+                IsActive,
+                Sales,
+                CommissionPercentage / 100,
+                GetValueToPay()));
         }
     }
 
