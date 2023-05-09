@@ -11,7 +11,11 @@ namespace Ejercicio.EmployeePOO
         public string LastName { get; set; }
         public DateTime BirthDate { get; set; }
         public DateTime HiringDate { get; set; }
-        public string IsActive { get; set; }
+        public bool IsActive { get; set; }
 
+        public virtual decimal CalculateIncome()
+        {
+            return 0;
+        }
     }
 }

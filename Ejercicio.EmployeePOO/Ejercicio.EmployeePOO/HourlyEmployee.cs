@@ -9,7 +9,7 @@ namespace Ejercicio.EmployeePOO
         public double Hours { get; set; }
         public decimal ValueHours { get; set; }
 
-        public decimal GetValueToPay()
+        public override decimal CalculateIncome()
         {
             return (decimal)Hours * ValueHours;
         }
@@ -25,7 +25,7 @@ namespace Ejercicio.EmployeePOO
              "¿Está activo?: {5}\n" +
              "Horas laboradas {6}\n" +
              "Valor hora: {7:C2}\n" +
-             "Ingresos: {8:C2}\n", Id, FirstName, LastName, BirthDate, HiringDate, IsActive, Hours, ValueHours, GetValueToPay()));
+             "Ingresos: {8:C2}\n", Id, FirstName, LastName, BirthDate, HiringDate, IsActive, Hours, ValueHours, CalculateIncome()));
 
         }
     }

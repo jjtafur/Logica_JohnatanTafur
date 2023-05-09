@@ -8,7 +8,7 @@ namespace Ejercicio.EmployeePOO
     {
      public decimal Salary { get; set; }
      
-     public decimal GetValueToPay()
+     public override decimal CalculateIncome()
         {
             return Salary;
         }

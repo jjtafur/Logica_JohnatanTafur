@@ -9,7 +9,7 @@ namespace Ejercicio.EmployeePOO
         public double CommissionPercentage { get; set; }
         public decimal Sales { get; set; }
 
-        public decimal GetValueToPay()
+        public override decimal CalculateIncome()
         {
             return Sales * ((decimal) CommissionPercentage/100);
         }
@@ -25,16 +25,7 @@ namespace Ejercicio.EmployeePOO
                 "¿Está activo? {5}\n" +
                 "Ventas del mes {6:C2}\n" +
                 "Porcentaje de comisión {7:P2}\n" +
-                "Ingresos Comisión: {8:C2}\n",
-                Id,
-                FirstName,
-                LastName,
-                BirthDate,
-                HiringDate,
-                IsActive,
-                Sales,
-                CommissionPercentage / 100,
-                GetValueToPay()));
+                "Ingresos Comisión: {8:C2}\n", Id, FirstName, LastName, BirthDate, HiringDate, IsActive, Sales, CommissionPercentage / 100, CalculateIncome()));
         }
     }
 
