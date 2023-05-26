@@ -13,6 +13,11 @@ namespace Ejercicio32.SeguimientoArrays
 
             int minimo = Numminimo(numeros);
             int maximo = Nummaximo(numeros);
+
+            Console.WriteLine($"El número mínimo es: {minimo}");
+            Console.WriteLine($"El número mínimo es: {maximo}");
+
+            Console.ReadLine();
         }
 
         static int[] LeerNumeros (int N)
@@ -42,10 +47,16 @@ namespace Ejercicio32.SeguimientoArrays
             return minimo;
         }
 
-        static int Nummaximo(int N)
+        static int Nummaximo(int [] numeros)
 
         {
+            int maximo = numeros[0];
 
+            for (int i = 1; i < numeros.Length; i++)
+            {
+                if (numeros[i] > maximo) maximo = numeros[i];
+            }
+            return maximo;
         }
     }
 }
