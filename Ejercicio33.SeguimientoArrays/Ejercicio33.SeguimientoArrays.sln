@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio33.SeguimientoArrays", "Ejercicio33.SeguimientoArrays\Ejercicio33.SeguimientoArrays.csproj", "{A7DC7D03-6B9E-428E-9F48-604840EF602A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7DC7D03-6B9E-428E-9F48-604840EF602A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7DC7D03-6B9E-428E-9F48-604840EF602A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7DC7D03-6B9E-428E-9F48-604840EF602A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7DC7D03-6B9E-428E-9F48-604840EF602A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F4AD3877-D987-4A16-AB00-30E2A5270DFD}
+	EndGlobalSection
+EndGlobal
