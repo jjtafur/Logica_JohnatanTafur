@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Numerics;
+using System.Runtime.Intrinsics;
 
 namespace Ejercicio33.SeguimientoArrays
 {
@@ -17,6 +18,7 @@ namespace Ejercicio33.SeguimientoArrays
             Console.WriteLine("Ingrese los elementos del vector 2");
             LeerVector(vector2);
 
+            CalcularSuma(vector1, vector2, vector3);
         }
 
         static void LeerVector(int[] vector)
@@ -29,9 +31,13 @@ namespace Ejercicio33.SeguimientoArrays
 
         }
 
-        static void CalcularSuma()
+        static void CalcularSuma(int[] vector1, int[] vector2, int[] vector3)
         {
- 
+
+            for (int i = 0; i < vector1.Length; i++)
+            {
+                vector3 = vector1 + vector2;
+            }
         }
 
         static void MostrarVector()
